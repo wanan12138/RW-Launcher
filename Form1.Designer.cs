@@ -40,7 +40,8 @@ partial class Form1
         this.textbox1 = new System.Windows.Forms.TextBox();
         this.label1 = new System.Windows.Forms.Label();
         this.label2 = new System.Windows.Forms.Label();
-        this.label3 = new System.Windows.Forms.Label();
+        this.label3 = new System.Windows.Forms.Label(); //暂时不写
+        this.button4 = new System.Windows.Forms.Button();
         
          
         //
@@ -80,7 +81,7 @@ partial class Form1
         // Button3 开服按钮
         //
         this.button3.Name = "button3";
-        this.button3.Location = new System.Drawing.Point(20,140);
+        this.button3.Location = new System.Drawing.Point(20,150);
         this.button3.Size = new System.Drawing.Size(100, 50);
         this.button3.Text = "开服";
         this.button3.Click += new System.EventHandler(this.OutPutForm_Shown); //绑定事件
@@ -92,33 +93,49 @@ partial class Form1
         this.button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(50,Color.Transparent); //鼠标经过
         this.button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(50,Color.Transparent); //鼠标按下
         //
+        // button4 设置
+        //
+        this.button4.Name = "button4";
+        this.button4.Location = new System.Drawing.Point(20,220);
+        this.button4.Size = new System.Drawing.Size(100, 50);
+        this.button4.Text = "设置";
+        this.button4.Click += new System.EventHandler(this.settings); //绑定事件
+        this.button4.TabIndex = 5;
+        this.button4.FlatStyle = FlatStyle.Flat; //样式
+        this.button4.ForeColor = Color.DarkOrange; //设置字体颜色
+        this.button4.FlatAppearance.BorderSize = 0; //去边线
+        this.button4.BackColor = Color.FromArgb(50,Color.Transparent);
+        this.button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(50,Color.Transparent); //鼠标经过
+        this.button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(50,Color.Transparent); //鼠标按下
+        //
         // textbox 容器
         //
-        this.textbox1.Location = new System.Drawing.Point(150,30);
-        this.textbox1.TabIndex = 3;
+        this.textbox1.Location = new System.Drawing.Point(150,560);
+        this.textbox1.TabIndex = 4;
         this.textbox1.Name = "textbox1";
         this.textbox1.Size = new System.Drawing.Size(700,560);
         this.textbox1.BorderStyle = BorderStyle.None;
         //this.textbox1
         //this.textbox1.Multiline = false;
+        
         //
-        // label1
+        // label1 Console控制台
         //
         this.label1.Name = "label1";
         this.label1.Size = new System.Drawing.Size(700,500);
-        this.label1.Location = new System.Drawing.Point(150, 70);
+        this.label1.Location = new System.Drawing.Point(150, 40);
         this.label1.TabIndex = 4;
         this.label1.FlatStyle = FlatStyle.Flat;
-        this.label1.ForeColor = Color.Azure; //设置字体颜色
+        this.label1.ForeColor = Color.Aqua; //设置字体颜色
         this.label1.BackColor = Color.FromArgb(50,Color.Transparent);
         //this.label1.FlatAppearance.BorderSize = 0; //去边线 Fuck winform
         //this.textbox1.BackColor = Color.FromArgb(50, Color.Transparent); //fuck winform
         //
-        // label2
+        // label2 
         //
         this.label2.Name = "label2";
         this.label2.Size = new System.Drawing.Size(75,80);
-        this.label2.Location = new System.Drawing.Point(20, 30);
+        this.label2.Location = new System.Drawing.Point(30, 30);
         this.label2.TabIndex = 5;
         this.label2.FlatStyle = FlatStyle.Flat;
         //this.label1.ForeColor = Color.Azure; //设置字体颜色
@@ -138,6 +155,7 @@ partial class Form1
         this.Controls.Add(this.button1); //添加进窗口
         this.Controls.Add(this.button2); //添加进窗口
         this.Controls.Add(this.button3);
+        this.Controls.Add(this.button4);
         this.Controls.Add(this.textbox1); //添加进窗口
         this.Controls.Add(this.label1);
         this.Controls.Add(this.label2);
@@ -149,6 +167,8 @@ partial class Form1
     private System.Windows.Forms.Button button2;
 
     private System.Windows.Forms.Button button3;
+
+    private System.Windows.Forms.Button button4;
 
     private System.Windows.Forms.TextBox textbox1;
 
