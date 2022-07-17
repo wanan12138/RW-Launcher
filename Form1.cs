@@ -38,26 +38,7 @@ public partial class Form1 : Form
         ReleaseCapture();
         SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
     }
-
-    //乱写的 fuck winform
-    //[DllImport("User32.dll ", EntryPoint = "SetParent")]
-    //private static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
-    //[DllImport("user32.dll ", EntryPoint = "ShowWindow")]
-    //public static extern int ShowWindow(IntPtr hwnd, int nCmdShow);
-    //private void button3_Click(object sender, EventArgs e)
-    //{ 
-    //Process p = new Process();
-
-    //p.StartInfo.FileName = "run.bat"; 
-
-    //p.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Minimized;//加上这句效果更好
-
-    //p.Start();
-    //System.Threading.Thread.Sleep(170);//加上，100如果效果没有就继续加大
-
-    //SetParent(p.MainWindowHandle, panel1.Handle); //panel1.Handle为要显示外部程序的容器
-    //ShowWindow(p.MainWindowHandle, 3);
-    //}
+    
     private void OutPutForm_Shown(object sender, EventArgs e)
     {
         Control.CheckForIllegalCrossThreadCalls = false;
@@ -81,12 +62,13 @@ public partial class Form1 : Form
             StringBuilder sb = new StringBuilder(this.label1.Text); //编码问题
             
             this.label1.Text = sb.AppendLine(outLine.Data).ToString();
-            //string utf8_string = Encoding.UTF8.GetString(Encoding.Default.GetBytes(label1.Text));
-            //this.label1.Text = utf8_string;
-
-
-            //this.label1.SelectionStart =this.label1.Text.Length;
-            //this.label1.ScrollToCaret();
+            
         }
+    }
+
+    private void settings(object sender, EventArgs e)
+    {
+        MessageBox.Show("敬请期待！","设置",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Hand);
+       
     }
 }
