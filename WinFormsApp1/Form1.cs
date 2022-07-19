@@ -7,6 +7,10 @@ namespace WinFormsApp1;
 
 public partial class Form1 : Form
 {
+    public UserControl1 f1;
+    private int a;
+    //public static string str;
+    
     [DllImport("user32.dll")] //抄来的
     public static extern bool ReleaseCapture();
 
@@ -20,6 +24,7 @@ public partial class Form1 : Form
     public Form1()
     {
         InitializeComponent();
+        f1 = new UserControl1(); //实例化
     }
 
     private void Close(object sender, EventArgs e)
@@ -41,6 +46,7 @@ public partial class Form1 : Form
     
     private void OutPutForm_Shown(object sender, EventArgs e)
     {
+        
         Control.CheckForIllegalCrossThreadCalls = false;
         Process p = new Process();
         p.StartInfo.FileName = "run.bat";
@@ -54,13 +60,14 @@ public partial class Form1 : Form
         p.OutputDataReceived += new DataReceivedEventHandler(OutputHandler);
         p.Start();//启动程序
         p.BeginOutputReadLine();
+        //this.button3.Click -= new System.EventHandler(this.OutPutForm_Shown);
     }
     private void OutputHandler(object sendingProcess,DataReceivedEventArgs outLine)
     {
+        
         if (!String.IsNullOrEmpty(outLine.Data))
         {
             StringBuilder sb = new StringBuilder(this.label1.Text); //编码问题
-            
             this.label1.Text = sb.AppendLine(outLine.Data).ToString();
             
         }
@@ -69,6 +76,11 @@ public partial class Form1 : Form
     private void settings(object sender, EventArgs e)
     {
         MessageBox.Show("敬请期待！","设置",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Hand);
-       
+    }
+
+    private void show1(object sender, EventArgs e)
+    {
+        panel1.Controls.Clear(); //清空原容器上的控件
+        panel1.Controls.Add(this.label1); //将窗体一加入容器panel2
     }
 }

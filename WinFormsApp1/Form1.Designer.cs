@@ -41,8 +41,10 @@ partial class Form1
         this.label1 = new System.Windows.Forms.Label();
         this.label2 = new System.Windows.Forms.Label();
         this.label3 = new System.Windows.Forms.Label(); //暂时不写
+        this.panel1 = new System.Windows.Forms.Panel();
         this.button4 = new System.Windows.Forms.Button();
-        
+        this.button5 = new System.Windows.Forms.Button();
+        this.button6 = new System.Windows.Forms.Button();
          
         //
         // button1 退出按钮
@@ -92,6 +94,7 @@ partial class Form1
         this.button3.BackColor = Color.FromArgb(50,Color.Transparent);
         this.button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(50,Color.Transparent); //鼠标经过
         this.button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(50,Color.Transparent); //鼠标按下
+        
         //
         // button4 设置
         //
@@ -108,13 +111,55 @@ partial class Form1
         this.button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(50,Color.Transparent); //鼠标经过
         this.button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(50,Color.Transparent); //鼠标按下
         //
+        // button5 服务器1 
+        //
+        this.button5.Name = "button5";
+        this.button5.Location = new System.Drawing.Point(870,40);
+        this.button5.Size = new System.Drawing.Size(100, 50);
+        this.button5.Text = "服务器一号";
+        this.button5.Click += new System.EventHandler(this.show1); //绑定事件
+        this.button5.TabIndex = 5;
+        this.button5.FlatStyle = FlatStyle.Flat; //样式
+        this.button5.ForeColor = Color.DarkOrange; //设置字体颜色
+        this.button5.FlatAppearance.BorderSize = 0; //去边线
+        this.button5.BackColor = Color.FromArgb(50,Color.Transparent);
+        this.button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(50,Color.Transparent); //鼠标经过
+        this.button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(50,Color.Transparent); //鼠标按下
+        //
+        // button6 服务器2
+        //
+        this.button6.Name = "button5";
+        this.button6.Location = new System.Drawing.Point(870,100);
+        this.button6.Size = new System.Drawing.Size(100, 50);
+        this.button6.Text = "服务器二号";
+        //this.button6.Click += new System.EventHandler(this.show2); //绑定事件
+        this.button6.TabIndex = 5;
+        this.button6.FlatStyle = FlatStyle.Flat; //样式
+        this.button6.ForeColor = Color.DarkOrange; //设置字体颜色
+        this.button6.FlatAppearance.BorderSize = 0; //去边线
+        this.button6.BackColor = Color.FromArgb(50,Color.Transparent);
+        this.button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(50,Color.Transparent); //鼠标经过
+        this.button6.FlatAppearance.MouseDownBackColor = Color.FromArgb(50,Color.Transparent); //鼠标按下
+        //
+        // panel1
+        //
+        this.panel1.Name = "panel1";
+        this.panel1.Location = new System.Drawing.Point(150,40);
+        this.panel1.TabIndex = 6;
+        this.panel1.Size = new System.Drawing.Size(700, 520);
+        this.panel1.BackColor = Color.FromArgb(50,Color.Transparent);
+        
+        
+        
+        //
         // textbox 容器
         //
-        this.textbox1.Location = new System.Drawing.Point(150,560);
-        this.textbox1.TabIndex = 4;
-        this.textbox1.Name = "textbox1";
-        this.textbox1.Size = new System.Drawing.Size(700,560);
-        this.textbox1.BorderStyle = BorderStyle.None;
+        //this.textbox1.Location = new System.Drawing.Point(150,560);
+        //this.textbox1.TabIndex = 4;
+        //this.textbox1.Name = "textbox1";
+        //this.textbox1.Size = new System.Drawing.Size(700,560);
+        //this.textbox1.BorderStyle = BorderStyle.None;
+        
         //this.textbox1
         //this.textbox1.Multiline = false;
         
@@ -122,8 +167,8 @@ partial class Form1
         // label1 Console控制台
         //
         this.label1.Name = "label1";
-        this.label1.Size = new System.Drawing.Size(700,500);
-        this.label1.Location = new System.Drawing.Point(150, 40);
+        this.label1.Size = new System.Drawing.Size(700,520);
+        //this.label1.Location = new System.Drawing.Point(150, 40);
         this.label1.TabIndex = 4;
         this.label1.FlatStyle = FlatStyle.Flat;
         this.label1.ForeColor = Color.Aqua; //设置字体颜色
@@ -156,27 +201,26 @@ partial class Form1
         this.Controls.Add(this.button2); //添加进窗口
         this.Controls.Add(this.button3);
         this.Controls.Add(this.button4);
-        this.Controls.Add(this.textbox1); //添加进窗口
-        this.Controls.Add(this.label1);
+        this.Controls.Add(this.button5);
+        this.Controls.Add(this.button6);
+        //this.Controls.Add(this.textbox1); //添加进窗口
+        //this.Controls.Add(this.label1);
         this.Controls.Add(this.label2);
+        this.Controls.Add(this.panel1);
+        this.panel1.Controls.Add(this.label1);
         this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
 
     }
     private System.Windows.Forms.Button button1;
-
     private System.Windows.Forms.Button button2;
-
     private System.Windows.Forms.Button button3;
-
     private System.Windows.Forms.Button button4;
-
+    private System.Windows.Forms.Button button5;
+    private System.Windows.Forms.Button button6;
     private System.Windows.Forms.TextBox textbox1;
-
     private System.Windows.Forms.Label label1;
-
     private System.Windows.Forms.Label label2;
-
     private System.Windows.Forms.Label label3;
-
+    private System.Windows.Forms.Panel panel1;
     #endregion
 }
