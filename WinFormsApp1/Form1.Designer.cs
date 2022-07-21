@@ -87,6 +87,7 @@ partial class Form1
         this.button3.Size = new System.Drawing.Size(100, 50);
         this.button3.Text = "开服";
         this.button3.Click += new System.EventHandler(this.OutPutForm_Shown); //绑定事件
+        
         this.button3.TabIndex = 2;
         this.button3.FlatStyle = FlatStyle.Flat; //样式
         this.button3.ForeColor = Color.DarkOrange; //设置字体颜色
@@ -102,7 +103,7 @@ partial class Form1
         this.button4.Location = new System.Drawing.Point(20,220);
         this.button4.Size = new System.Drawing.Size(100, 50);
         this.button4.Text = "设置";
-        this.button4.Click += new System.EventHandler(this.settings); //绑定事件
+        this.button4.Click += new System.EventHandler(this.Settings); //绑定事件
         this.button4.TabIndex = 5;
         this.button4.FlatStyle = FlatStyle.Flat; //样式
         this.button4.ForeColor = Color.DarkOrange; //设置字体颜色
@@ -117,7 +118,7 @@ partial class Form1
         this.button5.Location = new System.Drawing.Point(870,40);
         this.button5.Size = new System.Drawing.Size(100, 50);
         this.button5.Text = "服务器一号";
-        this.button5.Click += new System.EventHandler(this.show1); //绑定事件
+        this.button5.Click += new System.EventHandler(this.Show1); //绑定事件
         this.button5.TabIndex = 5;
         this.button5.FlatStyle = FlatStyle.Flat; //样式
         this.button5.ForeColor = Color.DarkOrange; //设置字体颜色
@@ -132,7 +133,7 @@ partial class Form1
         this.button6.Location = new System.Drawing.Point(870,100);
         this.button6.Size = new System.Drawing.Size(100, 50);
         this.button6.Text = "服务器二号";
-        //this.button6.Click += new System.EventHandler(this.show2); //绑定事件
+        this.button6.Click += new System.EventHandler(this.Show2); //绑定事件
         this.button6.TabIndex = 5;
         this.button6.FlatStyle = FlatStyle.Flat; //样式
         this.button6.ForeColor = Color.DarkOrange; //设置字体颜色
@@ -148,9 +149,7 @@ partial class Form1
         this.panel1.TabIndex = 6;
         this.panel1.Size = new System.Drawing.Size(700, 520);
         this.panel1.BackColor = Color.FromArgb(50,Color.Transparent);
-        
-        
-        
+
         //
         // textbox 容器
         //
@@ -172,7 +171,7 @@ partial class Form1
         this.label1.TabIndex = 4;
         this.label1.FlatStyle = FlatStyle.Flat;
         this.label1.ForeColor = Color.Aqua; //设置字体颜色
-        this.label1.BackColor = Color.FromArgb(50,Color.Transparent);
+        this.label1.BackColor = Color.FromArgb(0,Color.Transparent);
         //this.label1.FlatAppearance.BorderSize = 0; //去边线 Fuck winform
         //this.textbox1.BackColor = Color.FromArgb(50, Color.Transparent); //fuck winform
         //
@@ -213,7 +212,7 @@ partial class Form1
     }
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.Button button2;
-    private System.Windows.Forms.Button button3;
+    public System.Windows.Forms.Button button3; //open
     private System.Windows.Forms.Button button4;
     private System.Windows.Forms.Button button5;
     private System.Windows.Forms.Button button6;

@@ -34,11 +34,13 @@ partial class UserControl2
         this.label1 = new System.Windows.Forms.Label();
         this.SuspendLayout();
         //
-        this.label1.Location = new System.Drawing.Point(74, 121);
+        //this.label1.Location = new System.Drawing.Point(74, 121);
         this.label1.Name = "label1";
-        this.label1.Size = new System.Drawing.Size(100, 23);
+        this.label1.Size = new System.Drawing.Size(700, 520);
         this.label1.TabIndex = 0;
-        this.label1.Text = "芜湖";
+        this.label1.ForeColor = Color.Aqua; //设置字体颜色
+        this.label1.BackColor = Color.FromArgb(0,Color.Transparent);
+        //this.label1.Text = "芜湖";
         //
         components = new System.ComponentModel.Container();
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -48,6 +50,6 @@ partial class UserControl2
         this.Controls.Add(this.label1);
         this.ResumeLayout(false);
     }
-    private System.Windows.Forms.Label label1;
+    public System.Windows.Forms.Label label1;
     #endregion
 }
