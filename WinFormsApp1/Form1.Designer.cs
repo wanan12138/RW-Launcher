@@ -45,7 +45,7 @@ partial class Form1
         this.button4 = new System.Windows.Forms.Button();
         this.button5 = new System.Windows.Forms.Button();
         this.button6 = new System.Windows.Forms.Button();
-         
+        this.button7 = new System.Windows.Forms.Button();
         //
         // button1 退出按钮
         //
@@ -103,8 +103,8 @@ partial class Form1
         this.button4.Location = new System.Drawing.Point(20,220);
         this.button4.Size = new System.Drawing.Size(100, 50);
         this.button4.Text = "设置";
-        this.button4.Click += new System.EventHandler(this.Settings); //绑定事件
-        this.button4.TabIndex = 5;
+        this.button4.Click += new System.EventHandler(this.Show3); //绑定事件
+        this.button4.TabIndex = 3;
         this.button4.FlatStyle = FlatStyle.Flat; //样式
         this.button4.ForeColor = Color.DarkOrange; //设置字体颜色
         this.button4.FlatAppearance.BorderSize = 0; //去边线
@@ -119,7 +119,7 @@ partial class Form1
         this.button5.Size = new System.Drawing.Size(100, 50);
         this.button5.Text = "服务器一号";
         this.button5.Click += new System.EventHandler(this.Show1); //绑定事件
-        this.button5.TabIndex = 5;
+        this.button5.TabIndex = 4;
         this.button5.FlatStyle = FlatStyle.Flat; //样式
         this.button5.ForeColor = Color.DarkOrange; //设置字体颜色
         this.button5.FlatAppearance.BorderSize = 0; //去边线
@@ -129,7 +129,7 @@ partial class Form1
         //
         // button6 服务器2
         //
-        this.button6.Name = "button5";
+        this.button6.Name = "button6";
         this.button6.Location = new System.Drawing.Point(870,100);
         this.button6.Size = new System.Drawing.Size(100, 50);
         this.button6.Text = "服务器二号";
@@ -142,11 +142,26 @@ partial class Form1
         this.button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(50,Color.Transparent); //鼠标经过
         this.button6.FlatAppearance.MouseDownBackColor = Color.FromArgb(50,Color.Transparent); //鼠标按下
         //
+        //button7 设置
+        //
+        this.button7.Name = "button7";
+        this.button7.Location = new System.Drawing.Point(20,290);
+        this.button7.Size = new System.Drawing.Size(100, 50);
+        this.button7.Text = "关于我们";
+        this.button7.Click += new System.EventHandler(this.Show2); //绑定事件
+        this.button7.TabIndex = 6;
+        this.button7.FlatStyle = FlatStyle.Flat; //样式
+        this.button7.ForeColor = Color.DarkOrange; //设置字体颜色
+        this.button7.FlatAppearance.BorderSize = 0; //去边线
+        this.button7.BackColor = Color.FromArgb(50,Color.Transparent);
+        this.button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(50,Color.Transparent); //鼠标经过
+        this.button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(50,Color.Transparent); //鼠标按下
+        //
         // panel1
         //
         this.panel1.Name = "panel1";
         this.panel1.Location = new System.Drawing.Point(150,40);
-        this.panel1.TabIndex = 6;
+        this.panel1.TabIndex = 7;
         this.panel1.Size = new System.Drawing.Size(700, 520);
         this.panel1.BackColor = Color.FromArgb(50,Color.Transparent);
 
@@ -168,7 +183,7 @@ partial class Form1
         this.label1.Name = "label1";
         this.label1.Size = new System.Drawing.Size(700,520);
         //this.label1.Location = new System.Drawing.Point(150, 40);
-        this.label1.TabIndex = 4;
+        this.label1.TabIndex = 8;
         this.label1.FlatStyle = FlatStyle.Flat;
         this.label1.ForeColor = Color.Aqua; //设置字体颜色
         this.label1.BackColor = Color.FromArgb(0,Color.Transparent);
@@ -180,7 +195,7 @@ partial class Form1
         this.label2.Name = "label2";
         this.label2.Size = new System.Drawing.Size(75,80);
         this.label2.Location = new System.Drawing.Point(30, 30);
-        this.label2.TabIndex = 5;
+        this.label2.TabIndex = 9;
         this.label2.FlatStyle = FlatStyle.Flat;
         //this.label1.ForeColor = Color.Azure; //设置字体颜色
         this.label2.BackgroundImage = Image.FromFile(@"C:\Users\User\RiderProjects\WinFormsApp1\WinFormsApp1\UI\beijing.png");
@@ -212,10 +227,11 @@ partial class Form1
     }
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.Button button2;
-    public System.Windows.Forms.Button button3; //open
+    public System.Windows.Forms.Button button3; //open 
     private System.Windows.Forms.Button button4;
     private System.Windows.Forms.Button button5;
     private System.Windows.Forms.Button button6;
+    private System.Windows.Forms.Button button7;
     private System.Windows.Forms.TextBox textbox1;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Label label2;

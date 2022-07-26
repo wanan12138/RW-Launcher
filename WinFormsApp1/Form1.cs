@@ -3,6 +3,7 @@ using System.Threading;
 using System.Diagnostics;
 using System.Text;
 using System.IO;
+using System.Reflection;
 
 namespace WinFormsApp1;
 
@@ -10,6 +11,9 @@ public partial class Form1 : Form
 {
     public UserControl1 F1;
     public UserControl2 F2;
+    public Settings F3;
+    //public string Path = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location); //目前没需求
+    //获取当前文件夹路径
     private int A = 1;
     
     //public static string str;
@@ -29,6 +33,7 @@ public partial class Form1 : Form
         InitializeComponent();
         F1 = new UserControl1(); //实例化
         F2 = new UserControl2();
+        F3 = new Settings();
     }
 
     private void Close(object sender, EventArgs e)
@@ -108,12 +113,7 @@ public partial class Form1 : Form
             }
         }
     }
-
-    private void Settings(object sender, EventArgs e)
-    {
-        MessageBox.Show("敬请期待！","设置",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Hand);
-    }
-
+    
     private void Show1(object sender, EventArgs e)
     {
         A = 1;
@@ -127,5 +127,11 @@ public partial class Form1 : Form
         F2.Show();
         panel1.Controls.Clear(); //清空原容器上的控件
         panel1.Controls.Add(F2); //将窗体一加入容器panel2
+    }
+
+    private void Show3(object sender, EventArgs e)
+    {
+        F3.ShowDialog(); //窗口弹出式 应该没问题
+        
     }
 }
